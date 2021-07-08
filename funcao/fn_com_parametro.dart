@@ -1,8 +1,8 @@
-int executarPor(int qtd, void Function(String) fn, String valor) {
+int executarPor(int qtd, String Function(String) fn, String valor) {
   String textoCompleto = '';
 
   for (var i = 0; i < qtd; i++) {
-    fn(valor);
+    textoCompleto += fn(valor);
   }
 
   return textoCompleto.length;
@@ -17,4 +17,5 @@ main(List<String> args) {
   };
 
   int tamanho = executarPor(10, meuPrint, 'Olá mundo');
+  print('tamanho $tamanho');
 }

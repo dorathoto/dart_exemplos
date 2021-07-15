@@ -5,8 +5,17 @@
     "version": "0.2.0",
     "configurations": [
     {
-        "name": "Dart",
+        "name": "Current File (debug mode)",
         "type": "dart",
-        "request": "launch"
+        "request": "launch",
+        "env": {
+			"RELEASE_MODE": false
+		},
+
+		// Arguments to be passed to the Dart or Flutter app.
+		"args": [
+			"--dart-define", "MY_VAR=foo"
+		],
+        "flutterMode": "debug",
     }]
 }
